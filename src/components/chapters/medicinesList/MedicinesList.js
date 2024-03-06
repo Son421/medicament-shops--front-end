@@ -12,7 +12,7 @@ export default function MedicinesList(props){
                 'Access-Control-Allow-Origin': 'http://localhost:3000'
             }
         }).then(res => res.json()).then(res => {
-            setMedicament(res[0].products)
+            setMedicament(res.products)
         });
     }, []);
 
