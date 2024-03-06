@@ -1,0 +1,19 @@
+.shop-element__wrapper{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    margin: 8px;
+    padding: 20px;
+    cursor: pointer;
+    width: 160px;
+    font-weight: bold;
+}
+
+.shop-element__wrapper:hover{
+    transition: all .15s ease-in 0s;
+    background-color: lightgray;
+}
+
+.shop-element__wrapper:active, .shop-element__wrapper:focus {
+    background-color: lightgray;
+}

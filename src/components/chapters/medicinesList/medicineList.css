@@ -1,0 +1,48 @@
+.medicine-list__wrapper{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 8px;
+    width: 80%;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+::-webkit-scrollbar {
+    width: 30px;
+}
+
+::-webkit-scrollbar-track {
+    border: 1px solid black ;
+    border-radius: 5px;
+}
+  
+
+::-webkit-scrollbar-thumb {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    transition: all .15s ease-in 0s;
+    background-color: lightgray;
+}
+
+::-webkit-scrollbar-button:single-button{
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("../../../../public/pic/sort-up.svg");
+    background-size: 30px 30px;
+    background-position: center 4px;
+}
+
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("../../../../public/pic/sort-down.svg");
+    background-size: 30px 30px;
+    background-position: center -5px;
+}

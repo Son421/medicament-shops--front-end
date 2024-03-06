@@ -1,0 +1,10 @@
+.header__wrapper{
+    display: flex;
+    margin: 20px 0px 20px 80px ;
+}
+
+.header__line{
+    font-size: 34px;
+    margin: -14px 50px;
+    cursor: default;
+}

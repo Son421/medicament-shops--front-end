@@ -1,0 +1,35 @@
+.medicine-element__wrapper{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 24px 54px;
+
+}
+
+.medicine-element__pic{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 18px auto 10px;
+    width: 90%;
+    height: 250px;
+}
+
+.medicine-element__drug-name{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 4px 28px;
+}
+
+.medicine-element__cart_button{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 40px;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px;
+    float: right;
+}
+
+.medicine-element__cart_button:hover{
+    transition: all .15s ease-in 0s;
+    background-color: lightgray;
+}

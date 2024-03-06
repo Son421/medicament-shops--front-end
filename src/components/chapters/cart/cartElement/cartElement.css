@@ -1,0 +1,84 @@
+.cart-element__wrapper{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 18px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+}
+
+.cart-element__pic{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 420px;
+    height: 220px;
+}
+
+.cart-element__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-element-delete{
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+    left: 120px;
+}
+
+.cart-element__drug-name{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.cart-element__price-counter{
+    display: flex;
+}
+
+.cart-element__price-counter--number{
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid black;
+    margin: 32px 0;
+    padding: 4px 60px;
+}
+
+.cart-element__price-counter--button{
+    display: flex;
+    flex-direction: column;
+    margin: 32px 0;
+}
+
+.cart-element__price-counter--button-up{
+    width: 24px;
+    height: 16px;
+    background-image: url('../../../../../public/pic/sort-up.svg');
+    background-size: 28px 14px;
+    background-position: center 2px;
+    border: 1px solid black;
+    border-left: 0;
+    border-radius: 0px 5px 0px 0px;
+    cursor: pointer;
+}
+
+.cart-element__price-counter--button-down{
+    width: 24px;
+    height: 16px;
+    background-image: url('../../../../../public/pic/sort-down.svg');
+    background-size: 28px 14px;
+    background-position: center -2px;
+    border: 1px solid black;
+    border-left: 0;
+    border-top: 0;
+    border-radius: 0px 0px 5px 0px;
+    cursor: pointer;
+}
+
+.cart-element__price-counter--button-up:hover{
+    background-color: lightgray;
+}
+
+.cart-element__price-counter--button-down:hover{
+    background-color: lightgray;
+}
