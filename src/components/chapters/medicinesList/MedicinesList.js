@@ -37,7 +37,7 @@ export default function MedicinesList(props){
             const cartItems = cartDoublicateItems.concat(cartItem);
             setCart(cartItems);
         }else{
-            cartItem.quantity = 0;
+            cartItem.quantity = 1;
             const cartItems = cart.concat(cartItem);
             setCart(cartItems);
         } 
