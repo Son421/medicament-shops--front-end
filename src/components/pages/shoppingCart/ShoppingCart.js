@@ -41,7 +41,7 @@ export default function ShoppingCart(){
 
     function changePrice(arr){
         const price = arr.reduce(function(sum, product) {
-            return sum + (product.pricePerUnit * product.quantity);
+            return sum + (product.price * product.quantity);
         }, 0);
         return price;
     }
@@ -59,7 +59,7 @@ export default function ShoppingCart(){
     }
 
     function sendCustomerInfo(){
-        fetch('https://medicament-shops.onrender.com/shops', {
+        fetch('https://medicament-shops.onrender.com/carts/submit', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json;charset=utf-8'

@@ -10,12 +10,13 @@ export default function Shop(){
         setShop(drugShop);
     }
 
-    return(
-        <div>
-          <section className='shop__wrapper'>
-            <ShopsList showDrug={showDrug}/>
-            <MedicinesList medicines={shop.productsList} />
-          </section>
-        </div>
-    )
+  return(
+    <div>
+      <section className='shop__wrapper'>
+        <ShopsList showDrug={showDrug}/>
+        { shop ? <MedicinesList shop={shop}/>: null}
+      </section>
+    </div>
+  )
+    
 }

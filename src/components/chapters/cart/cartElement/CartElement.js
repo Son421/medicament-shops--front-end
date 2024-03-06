@@ -25,7 +25,7 @@ export default function CartElement(props){
             <div className='cart-element__text'> 
                 <button className='cart-element-delete' onClick={deleteDrug}> X </button> 
                 <p className='cart-element__drug-name'>{props.cart.name}</p>
-                <div>Price: {props.cart.pricePerUnit * props.cart.quantity}</div>
+                <div>Price: {props.cart.price * props.cart.quantity}</div>
                 <div className='cart-element__price-counter'>
                     <div className='cart-element__price-counter--number'> {props.cart.quantity} </div>
                     <div className='cart-element__price-counter--button'>

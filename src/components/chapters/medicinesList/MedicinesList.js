@@ -4,6 +4,17 @@ import './medicineList.css';
 
 export default function MedicinesList(props){
     const [cart, setCart] = useState([]);
+    const [medicament, setMedicament] = useState();
+
+    useEffect(() =>{
+        fetch(`https://medicament-shops.onrender.com/shops/products/${props.shop.name}`, {
+            headers: {
+                'Access-Control-Allow-Origin': 'http://localhost:3000'
+            }
+        }).then(res => res.json()).then(res => {
+            setMedicament(res[0].products)
+        });
+    }, []);
 
     useEffect(() =>{
         const items = JSON.parse(localStorage.getItem('cart'));
@@ -26,16 +37,22 @@ export default function MedicinesList(props){
             const cartItems = cartDoublicateItems.concat(cartItem);
             setCart(cartItems);
         }else{
+            cartItem.quantity = 0;
             const cartItems = cart.concat(cartItem);
             setCart(cartItems);
         } 
     }
 
-    return(
-        <div className='medicine-list__wrapper'>
-            {props.medicines.map((medicineItem) => (
-                    <MedicineElement medicine={medicineItem} addToCart={addToCart} key={medicineItem.id}/>
-                ))}
-        </div>
-    )
+    if(medicament){
+        return(
+            <div className='medicine-list__wrapper'>
+                {medicament.map((medicineItem) => (
+                        <MedicineElement medicine={medicineItem} addToCart={addToCart} key={medicineItem.id}/>
+                    ))}
+            </div>
+        )
+    }else{
+        return null;
+    }
 }
+   
